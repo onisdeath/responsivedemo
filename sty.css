@@ -1,0 +1,129 @@
+body {
+  background-color: #0B2447;
+  background: radial-gradient(circle, #19376D 0%, #0B2447 100%);
+  font-family: "Gruppo", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+}
+.cnt {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  grid-template-rows: repeat(4, minmax(150px, 1fr));
+  gap: 1.5rem;
+  overflow: hidden;
+}
+.box {
+  background-color: #19376D;
+  background: radial-gradient(circle, #576CBC 0%, #19376D 100%);
+  border-radius: 7.5%;
+  padding: 10px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.tw {
+  grid-area: 3;
+}
+.img {
+  display: flex;
+  justify-content: center;
+  grid-area: 1/2/3/3;
+}
+img {
+  align-self: center;
+  border-radius: 5%;
+  width: 180px;
+}
+.tw > img,
+.gh > img,
+.so > img {
+  width: 32px;
+}
+.info {
+  grid-area: 1/3/3/5;
+}
+
+.em {
+  grid-area: 4/2/5/4;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+p,
+ul {
+  font-size: 1.5rem;
+  text-align: center;
+}
+h1,
+p,
+h2,
+ul {
+  color: #A5D7E8;
+}
+li {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  list-style: none;
+}
+a {
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: #A5D7E8;
+}
+.nav {
+  grid-area: 1/1/5/2;
+}
+
+@media (max-width: 900px) {
+  body {
+    background-color: #0B2447;
+    background: radial-gradient(circle, #19376D 0%, #0B2447 100%);
+    font-family: "Gruppo", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+  }
+  .cnt {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-template-rows: repeat(5, minmax(200px, 1fr));
+    gap: 1.5rem;
+    overflow: hidden;
+  }
+  .img > img{
+    object-fit: contain;
+    width: 100%;
+  }
+  .nav {
+    grid-area: 1/1/2/4;
+  }
+  .info {
+    grid-area: 2/1/4/3;
+  }
+  .img {
+    grid-area: 4/1/6;
+  }
+  .tw {
+    grid-area: 4/2/5/3;
+  }
+  .gh {
+    grid-area:2/3/3/4;
+  }
+  .so {
+    grid-area: 3/3/4/4;
+  }
+  .footer {
+    grid-area: 5/2/6/4;
+  }
+}
